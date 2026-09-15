@@ -1,3 +1,5 @@
+[English](publishing-guide.en.md) | **简体中文** | [← 返回中文 README](../README.zh-CN.md)
+
 # 发布指南（发版、GitHub、npm、内网镜像）
 
 本文是**通用**发布说明：任何人 fork 这个仓库后都能照做。内网专有的主机/交换站地址不在仓库里，

@@ -1,3 +1,5 @@
+**English** | [简体中文](README.zh-CN.md)
+
 # dsh-session-pin
 
 Pin / favourite (置顶 / 收藏) sessions in the DeepSeek Harness Web sidebar.
@@ -37,8 +39,8 @@ State is written through the **shipped** workspace store action
 
 ## Install
 
-Three ways: clone the source (intranet Gogs), run the self-bootstrapping script
-from the exchange, or do it manually.
+Three ways: the self-bootstrapping script from a release, a source checkout,
+or the manual steps below.
 
 ### From GitHub (recommended)
 
@@ -82,10 +84,12 @@ tar -xzf dsh-session-pin-0.1.0.tar.gz && cd dsh-session-pin-0.1.0
 bash install.sh --profile web
 ```
 
-Full manual, uninstall and troubleshooting: `docs/安装部署说明.md`
-(shipped in the release, also mirrored as `INSTALL-README-dsh-session-pin.md`
-next to the tarball on a mirror). Publishing/maintaining the release:
-`docs/发布指南.md`.
+Full manual install, uninstall and troubleshooting:
+[`docs/install-and-deploy.en.md`](docs/install-and-deploy.en.md) — also mirrored as
+`INSTALL-README-dsh-session-pin.md` next to the tarball on a mirror, and shipped inside
+the release. Cutting a release: [`docs/publishing-guide.en.md`](docs/publishing-guide.en.md).
+中文文档：[`README.zh-CN.md`](README.zh-CN.md)、[`docs/install-and-deploy.zh-CN.md`](docs/install-and-deploy.zh-CN.md)、
+[`docs/publishing-guide.zh-CN.md`](docs/publishing-guide.zh-CN.md).
 
 ### Manual
 

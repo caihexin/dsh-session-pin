@@ -1,3 +1,5 @@
+[English](install-and-deploy.en.md) | **简体中文** | [← 返回中文 README](../README.zh-CN.md)
+
 # dsh-session-pin 安装部署说明
 
 **插件**：`dsh-session-pin` 0.1.0 —— 给 DSH Web 侧栏会话列表加「置顶 / 收藏」
