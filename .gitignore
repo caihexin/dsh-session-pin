@@ -1,0 +1,11 @@
+# deps
+node_modules/
+# release artifacts (rebuild with dist/build-release.sh)
+dist/*.tar.gz
+dist/*.tar.gz.sha256
+dist/dsh-session-pin-*/
+dist/INSTALL-README-*.md
+# scratch
+*.log
+*.bak-*
+.DS_Store

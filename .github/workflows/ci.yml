@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: test (node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['18', '20', '22']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm test
+
+  release:
+    name: build release assets
+    needs: test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build tarball + sha256 + install README
+        env:
+          BASE_URL: https://github.com/${{ github.repository }}/releases/latest/download
+        run: bash dist/build-release.sh
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/dsh-session-pin-*.tar.gz
+            dist/dsh-session-pin-*.tar.gz.sha256
+            dist/install-dsh-session-pin.sh
+            dist/INSTALL-README-dsh-session-pin.md
+          generate_release_notes: true

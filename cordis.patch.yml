@@ -1,0 +1,6 @@
+# Mount dsh-session-pin in the host-side DSH runtime.
+# The bundle's client half (lib/client.js) is discovered from this package's
+# `dsh.client` declaration and served at /plugins/dsh-session-pin/client.js.
+- insert:
+    - id: dsh-session-pin
+      name: "dsh-session-pin"

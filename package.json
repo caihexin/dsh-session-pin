@@ -1,0 +1,56 @@
+{
+  "name": "dsh-session-pin",
+  "version": "0.1.0",
+  "description": "Pin / favorite sessions in the DeepSeek Harness Web sidebar — pinned sessions stay at the front of the session list, persisted server-side.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "docs",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "author": "caihexin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caihexin/dsh-session-pin.git"
+  },
+  "homepage": "https://github.com/caihexin/dsh-session-pin",
+  "bugs": {
+    "url": "https://github.com/caihexin/dsh-session-pin/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "pin",
+    "favorite"
+  ],
+  "license": "MIT"
+}
