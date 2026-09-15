@@ -272,7 +272,7 @@ fi
 # ---- 2. 落到稳定源码目录 ---------------------------------------------------
 say "$(m step2 "$DEST")"
 run mkdir -p "$DEST"
-for item in package.json cordis.patch.yml lib test README.md docs; do
+for item in package.json cordis.patch.yml lib test README.md README.zh-CN.md docs; do
   [ -e "$SRC/$item" ] || continue
   run rm -rf "$DEST/$item"
   run cp -a "$SRC/$item" "$DEST/"
